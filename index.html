@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neta Ji - Janata Ka Sewak</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        saffron: '#FF9933',
+                        indiaGreen: '#138808',
+                        offWhite: '#F8F9FA'
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-offWhite font-sans text-gray-800 antialiased overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-md shadow-sm" id="navbar">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold flex items-center gap-2">
+                <span class="text-saffron">NETA</span> <span class="text-indiaGreen">JI</span>
+            </a>
+            <div class="hidden md:flex gap-8 items-center font-medium">
+                <a href="#home" class="hover:text-saffron transition-colors">Home</a>
+                <a href="#vision" class="hover:text-saffron transition-colors">Vision</a>
+                <a href="#work" class="hover:text-saffron transition-colors">Vikas Karya</a>
+                <a href="#contact" class="hover:text-saffron transition-colors">Samvad</a>
+                <a href="https://wa.me/919876543210"
+                    class="bg-indiaGreen text-white px-5 py-2 rounded-full hover:bg-green-700 transition shadow-lg flex items-center gap-2">
+                    <i class="fab fa-whatsapp"></i> WhatsApp Me
+                </a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-2xl focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white w-full border-t border-gray-100">
+            <a href="#home" class="block px-6 py-3 hover:bg-gray-50 border-b border-gray-100">Home</a>
+            <a href="#vision" class="block px-6 py-3 hover:bg-gray-50 border-b border-gray-100">Vision</a>
+            <a href="#work" class="block px-6 py-3 hover:bg-gray-50 border-b border-gray-100">Vikas Karya</a>
+            <a href="#contact" class="block px-6 py-3 hover:bg-gray-50">Samvad</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home"
+        class="min-h-screen pt-24 pb-12 flex items-center relative overflow-hidden bg-gradient-to-br from-orange-50 via-white to-green-50">
+        <!-- Background Elements -->
+        <div
+            class="absolute top-0 right-0 w-1/2 h-full bg-saffron/10 skew-x-12 transform translate-x-20 hidden lg:block">
+        </div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-indiaGreen/5 rounded-full blur-3xl"></div>
+
+        <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10">
+            <!-- Text Content -->
+            <div class="order-2 lg:order-1 space-y-6 slide-in-left">
+                <div
+                    class="inline-block bg-saffron text-white px-4 py-1 rounded-full text-sm font-semibold tracking-wide uppercase shadow-sm">
+                    Janata Ka Sewak
+                </div>
+                <h1 class="text-5xl lg:text-7xl font-bold leading-tight">
+                    Building a <br>
+                    <span class="text-saffron">New</span> <span class="text-indiaGreen">India</span>
+                </h1>
+                <p class="text-xl text-gray-600 max-w-lg">
+                    Dedicated to development, committed to progress. Your voice, my mission. Join us in the journey of
+                    transformation.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <a href="#contact"
+                        class="bg-saffron text-white px-8 py-3 rounded-md font-semibold hover:bg-orange-600 transition shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                        Connect Directly with me
+                    </a>
+                    <a href="#work"
+                        class="px-8 py-3 rounded-md font-semibold border-2 border-gray-300 hover:border-saffron hover:text-saffron transition">
+                        View Our Work
+                    </a>
+                </div>
+
+                <!-- Stats -->
+                <div class="grid grid-cols-3 gap-6 pt-8 border-t border-gray-200 mt-8">
+                    <div>
+                        <h3 class="text-3xl font-bold text-gray-800">15+</h3>
+                        <p class="text-sm text-gray-500">Years Service</p>
+                    </div>
+                    <div>
+                        <h3 class="text-3xl font-bold text-gray-800">500+</h3>
+                        <p class="text-sm text-gray-500">Projects Done</p>
+                    </div>
+                    <div>
+                        <h3 class="text-3xl font-bold text-gray-800">10L+</h3>
+                        <p class="text-sm text-gray-500">Lives Touched</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Image -->
+            <div class="order-1 lg:order-2 relative flex justify-center lg:justify-end slide-in-right">
+                <div class="relative w-full max-w-md lg:max-w-lg aspect-[4/5] flex items-end justify-center">
+                    <!-- Decorative Circle behind -->
+                    <div
+                        class="absolute inset-x-0 bottom-0 h-[80%] bg-gradient-to-t from-saffron/20 to-transparent rounded-b-full opacity-60">
+                    </div>
+                    <!-- Image -->
+                    <img src="assets/hero.png" alt="Neta Ji"
+                        class="relative z-10 max-h-full object-contain filter drop-shadow-2xl hover:scale-105 transition-transform duration-700">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section id="vision" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-saffron font-semibold uppercase tracking-wider mb-2">Our Mission</h2>
+                <h3 class="text-4xl font-bold text-gray-800 mb-4">A Vision for Progress</h3>
+                <div class="w-24 h-1 bg-gradient-to-r from-saffron to-indiaGreen mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div
+                    class="bg-gray-50 p-8 rounded-2xl border border-gray-100 hover:shadow-2xl transition-all duration-300 group hover:-translate-y-2">
+                    <div
+                        class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-600 mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                        <i class="fas fa-city text-2xl"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-3">Infrastructure</h4>
+                    <p class="text-gray-600">Building world-class roads, bridges, and smart cities to accelerate
+                        economic growth.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div
+                    class="bg-gray-50 p-8 rounded-2xl border border-gray-100 hover:shadow-2xl transition-all duration-300 group hover:-translate-y-2">
+                    <div
+                        class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center text-indiaGreen mb-6 group-hover:bg-indiaGreen group-hover:text-white transition-colors">
+                        <i class="fas fa-graduation-cap text-2xl"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-3">Education</h4>
+                    <p class="text-gray-600">Modernizing schools, digital classrooms, and ensuring quality education for
+                        every child.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div
+                    class="bg-gray-50 p-8 rounded-2xl border border-gray-100 hover:shadow-2xl transition-all duration-300 group hover:-translate-y-2">
+                    <div
+                        class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center text-saffron mb-6 group-hover:bg-saffron group-hover:text-white transition-colors">
+                        <i class="fas fa-hands-helping text-2xl"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-3">Social Welfare</h4>
+                    <p class="text-gray-600">Empowering women, supporting farmers, and ensuring healthcare access for
+                        all.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Gallery (Masonry style using CSS Columns) -->
+    <section id="work" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div class="max-w-2xl">
+                    <h2 class="text-indiaGreen font-semibold uppercase tracking-wider mb-2">Vikas Karya</h2>
+                    <h3 class="text-4xl font-bold text-gray-800">Development in Action</h3>
+                </div>
+                <a href="#"
+                    class="hidden md:inline-flex items-center gap-2 text-saffron font-semibold hover:gap-4 transition-all mt-4 md:mt-0">
+                    View All Projects <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+                <!-- Gallery Item 1 -->
+                <div class="break-inside-avoid relative group rounded-xl overflow-hidden cursor-pointer gallery-item"
+                    onclick="openLightbox('assets/gallery1.png', 'Model Road Construction Project')">
+                    <img src="assets/gallery1.png" alt="Road Construction"
+                        class="w-full h-auto transform group-hover:scale-110 transition-transform duration-500">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-saffron text-sm font-bold uppercase mb-1">Infrastructure</span>
+                        <h4 class="text-white text-xl font-bold">Highway Project Phase 1</h4>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="break-inside-avoid relative group rounded-xl overflow-hidden cursor-pointer gallery-item"
+                    onclick="openLightbox('assets/gallery2.png', 'Public Rally & Address')">
+                    <img src="assets/gallery2.png" alt="Public Meeting"
+                        class="w-full h-auto transform group-hover:scale-110 transition-transform duration-500">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-saffron text-sm font-bold uppercase mb-1">Public Connect</span>
+                        <h4 class="text-white text-xl font-bold">Jan Sabha - District 4</h4>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="break-inside-avoid relative group rounded-xl overflow-hidden cursor-pointer gallery-item"
+                    onclick="openLightbox('assets/gallery3.png', 'Smart Classroom Inauguration')">
+                    <img src="assets/gallery3.png" alt="Education"
+                        class="w-full h-auto transform group-hover:scale-110 transition-transform duration-500">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-saffron text-sm font-bold uppercase mb-1">Education</span>
+                        <h4 class="text-white text-xl font-bold">Digital India Mission</h4>
+                    </div>
+                </div>
+                <!-- Reusing images for layout demo -->
+                <div class="break-inside-avoid relative group rounded-xl overflow-hidden cursor-pointer gallery-item"
+                    onclick="openLightbox('assets/gallery1.png', 'Rural Road Development')">
+                    <img src="assets/gallery1.png" alt="Road Work 2"
+                        class="w-full h-auto transform group-hover:scale-110 transition-transform duration-500 grayscale group-hover:grayscale-0">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-saffron text-sm font-bold uppercase mb-1">Rural Development</span>
+                        <h4 class="text-white text-xl font-bold">Connecting Villages</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 text-center md:hidden">
+                <a href="#" class="inline-flex items-center gap-2 text-saffron font-semibold">
+                    View All Projects <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Complaint Box / Contact -->
+    <section id="contact" class="py-20 relative bg-white overflow-hidden">
+        <!-- Background Decor -->
+        <div class="absolute -left-10 top-20 w-72 h-72 bg-saffron/5 rounded-full blur-3xl"></div>
+        <div class="absolute right-0 bottom-0 w-96 h-96 bg-indiaGreen/5 rounded-full blur-3xl"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Text -->
+                <div>
+                    <h2 class="text-saffron font-semibold uppercase tracking-wider mb-2">Seedha Samvad</h2>
+                    <h3 class="text-4xl font-bold text-gray-800 mb-6">Direct Connect with Your Leader</h3>
+                    <p class="text-gray-600 mb-8 text-lg">
+                        Have a suggestion or a complaint? I am here to listen. Drop your message directly here, and my
+                        team will get back to you within 24 hours.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center text-saffron text-xl">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Office Address</h4>
+                                <p class="text-gray-600">123, Jan Sewa Bhawan, New Delhi</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-indiaGreen text-xl">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Helpline</h4>
+                                <p class="text-gray-600">+91 98765 43210</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-xl">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Email Us</h4>
+                                <p class="text-gray-600">connect@netaji.in</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-100">
+                    <form id="complaintForm" onsubmit="handleFormSubmit(event)">
+                        <div class="space-y-4">
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                                    <input type="text" name="name" required
+                                        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-saffron focus:border-transparent outline-none transition"
+                                        placeholder="Your Name">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Phone</label>
+                                    <input type="tel" name="phone" required
+                                        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-saffron focus:border-transparent outline-none transition"
+                                        placeholder="+91 XXXXX XXXXX">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+                                <select name="subject"
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-saffron focus:border-transparent outline-none transition">
+                                    <option>General Complaint</option>
+                                    <option>Development Suggestion</option>
+                                    <option>Appointment Request</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                                <textarea name="message" rows="4" required
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-saffron focus:border-transparent outline-none transition"
+                                    placeholder="Describe your issue..."></textarea>
+                            </div>
+                            <button type="submit"
+                                class="w-full bg-gradient-to-r from-saffron to-orange-600 text-white font-bold py-3 rounded-lg hover:shadow-lg hover:to-orange-700 transition transform hover:-translate-y-1">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 border-t-4 border-saffron">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div class="col-span-1 md:col-span-2">
+                    <a href="#" class="text-3xl font-bold flex items-center gap-2 mb-4">
+                        <span class="text-saffron">NETA</span> <span class="text-indiaGreen">JI</span>
+                    </a>
+                    <p class="text-gray-400 max-w-sm">
+                        Serving the nation with dedication and integrity. Join us in building a stronger, prosperous
+                        India.
+                    </p>
+                    <div class="flex gap-4 mt-6">
+                        <a href="#"
+                            class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-saffron hover:text-white transition"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-saffron hover:text-white transition"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-saffron hover:text-white transition"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-saffron hover:text-white transition"><i
+                                class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#home" class="hover:text-saffron transition">Home</a></li>
+                        <li><a href="#vision" class="hover:text-saffron transition">Vision</a></li>
+                        <li><a href="#work" class="hover:text-saffron transition">Achievements</a></li>
+                        <li><a href="#contact" class="hover:text-saffron transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="privacy.html" class="hover:text-saffron transition">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="hover:text-saffron transition">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
+                &copy; 2026 Neta Ji Portfolio. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Share Button -->
+    <div class="fixed bottom-6 right-6 z-40 flex flex-col items-end gap-3 group">
+        <div id="shareOptions"
+            class="flex flex-col gap-3 transition-all duration-300 opacity-0 translate-y-10 pointer-events-none">
+            <a href="#"
+                class="w-12 h-12 bg-blue-600 text-white rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition"><i
+                    class="fab fa-facebook-f"></i></a>
+            <a href="#"
+                class="w-12 h-12 bg-sky-500 text-white rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition"><i
+                    class="fab fa-twitter"></i></a>
+            <a href="https://wa.me/"
+                class="w-12 h-12 bg-green-500 text-white rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition"><i
+                    class="fab fa-whatsapp"></i></a>
+        </div>
+        <button onclick="toggleShare()"
+            class="w-14 h-14 bg-saffron text-white rounded-full shadow-xl flex items-center justify-center text-2xl hover:bg-orange-600 transition hover:rotate-90">
+            <i class="fas fa-share-alt"></i>
+        </button>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox"
+        class="fixed inset-0 z-50 bg-black/95 hidden flex items-center justify-center opacity-0 transition-opacity duration-300">
+        <button onclick="closeLightbox()"
+            class="absolute top-6 right-6 text-white text-4xl hover:text-saffron transition">&times;</button>
+        <div class="max-w-4xl w-full p-4 text-center">
+            <img id="lightbox-img" src="" alt="Full View" class="max-h-[80vh] mx-auto rounded-lg shadow-2xl mb-4">
+            <h3 id="lightbox-caption" class="text-white text-2xl font-bold"></h3>
+        </div>
+    </div>
+
+    <!-- Custom Success Modal -->
+    <div id="successModal"
+        class="fixed inset-0 z-[100] flex items-center justify-center p-4 opacity-0 pointer-events-none transition-all duration-300">
+        <!-- Backdrop -->
+        <div class="absolute inset-0 bg-black/70 backdrop-blur-sm transition-opacity" onclick="closeSuccessModal()">
+        </div>
+        <!-- Modal Content -->
+        <div id="modalContent"
+            class="bg-white rounded-3xl shadow-2xl p-8 max-w-sm w-full relative transform scale-90 transition-all duration-300 text-center border-t-4 border-indiaGreen">
+            <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i class="fas fa-check text-4xl text-indiaGreen"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-2">Message Sent!</h3>
+            <p class="text-gray-600 mb-6">Thank you for connecting! Your message has been successfully sent to Neta Ji's
+                office.</p>
+            <button onclick="closeSuccessModal()"
+                class="w-full bg-indiaGreen text-white py-3 rounded-xl font-semibold hover:bg-green-700 transition shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                Okay, Great!
+            </button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>
